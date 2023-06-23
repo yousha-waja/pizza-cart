@@ -1,0 +1,138 @@
+.container {
+   
+    min-height: 100vh;
+    min-height: 100dvh;
+    min-width: 110dvh;
+    display:grid;
+    grid-template-rows: auto 1fr auto;
+    border: 6px double rgb(220, 113, 19);
+}
+
+footer, header {
+    background-color: rgb(255, 183, 0);
+}
+
+header {
+    font-size: 20vh;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-style: double;
+    padding-bottom: 8px;
+}
+
+footer {
+    display: flex;
+}
+
+#address {
+    width: 50%;
+    margin: 0 auto;
+    padding-right: 3dvh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+main, .cart{
+    background-image: url(images/pizza.jpeg);
+    background-size: cover;
+}
+
+@media (min-width: 960px) {
+    main {
+      display: flex;
+      justify-content: space-evenly;
+    }
+    
+}
+
+main div {
+    background-color: rgba(3, 3, 3, 0.7);
+    margin: 0.5em 0.5em;
+    
+}
+
+.small button {
+    width: 20dvh;
+    height: 20dvh;
+    border-radius: 100%;
+    margin: auto;
+    margin-bottom: 2vh;
+    background-image: url(./images/pizza-icon.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+.medium button {
+    width: 30dvh;
+    height: 30dvh;
+    border-radius: 100%;
+    margin: auto;
+    margin-bottom: 2vh;
+    background-image: url(./images/pizza-icon.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+.large button {
+    width: 40dvh;
+    height: 40dvh;
+    border-radius: 100%;
+    margin: 0px auto;
+    margin-bottom: 2vh;
+    background-image: url(./images/pizza-icon.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+.small, .medium, .large {
+    display:grid;
+    color: rgb(216, 147, 9);
+}
+ul {
+    margin-top: auto;
+    color: beige;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#contact {
+    padding-left: 1vh;
+}
+  
+#address img {
+    max-width: 10vh;
+    max-height: 10vh;
+    border-radius: 50%;
+    opacity: 0.6;
+    margin-right: 5px
+}
+
+a:link {
+    color: rgb(50, 14, 8);
+}
+
+a:hover {
+    color: rgb(255, 136, 0);
+  }
+  
+  a:active {
+    color: green;
+  }
+
+.cart div {
+    background-color: rgba(3, 3, 3, 0.7);
+    margin: 0.5em 0.5em;
+}
+
+.tables {
+    color: rgb(216, 147, 9);
+    width: 100%;
+  }
+
+  .tables th, .tables td {
+    border: 0.1em solid rgba(3, 3, 3, 0.7);
+  }
+
+button:hover {
+    box-shadow: 0 0 18px rgb(252, 72, 1);
+}
