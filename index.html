@@ -110,13 +110,23 @@
         <button
           style="background-color: rgb(216, 147, 9)"
           x-on:click="checkout"
+          x-show="visible"
         >
           Checkout
         </button>
-        <input type="text" />
-        <p x-show="enjoy" style="text-align: center; color: rgb(216, 147, 9);">"Enjoy your pizzas"</p>
-        <p x-show="pay" style="text-align: center; color: rgb(216, 147, 9);">"Sorry - that is not enough money!"</p>
-        <p x-show="niks" style="text-align: center; color: rgb(216, 147, 9);">"Amount not entered"</p>
+        <input type="text" x-show="visible" />
+        <p x-show="enjoy" style="text-align: center; color: rgb(216, 147, 9)">
+          "Enjoy your pizzas"
+        </p>
+        <p x-show="pay" style="text-align: center; color: rgb(216, 147, 9)">
+          "Sorry - that is not enough money!"
+        </p>
+        <p x-show="niks" style="text-align: center; color: rgb(216, 147, 9)">
+          "Amount not entered"
+        </p>
+        <p x-show="empty" style="text-align: center; color: rgb(216, 147, 9)">
+          "Cart is empty"
+        </p>
       </div>
     </div>
     <footer>

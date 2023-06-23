@@ -9,6 +9,7 @@
       enjoy:false,
       pay:false,
       niks:false,
+      empty: false,
 
       smallC :1,
       priceS:60.00,
@@ -73,34 +74,43 @@
         this.total += 104.90
        }
       },
-      checkout(){
-        var input = document.querySelector("input")
+      checkout() {
+        var input = document.querySelector("input");
         if (this.enjoy === false && parseFloat(input.value) >= parseFloat(this.total)) {
-            this.enjoy = true;
+          this.enjoy = true;
+          setTimeout(() => {
+            this.enjoy = false;
+          }, 2000);
+          input.value = '';
+          this.visibleS = false;
+          this.visibleM = false;
+          this.visibleL = false;
+          this.visible =false;
+          this.count = 0;
+          this.total = 0;
+        } 
+        else if (this.count === 0 && this.total === 0 && this.input !=='') {
+            this.empty = true;
             setTimeout(() => {
-              this.enjoy = false;
+              this.empty = false;
             }, 2000);
-            input.value='';
-            this.visibleS = false;
-            this.visibleM = false;
-            this.visibleL = false;
-            this.count =0;
-            this.total =0 ;
-
-          } else if (this.pay === false && parseFloat(input.value) < parseFloat(this.total)){
-            this.pay = true;
-            setTimeout(() => {
-              this.pay = false;
-            }, 2000);
-            input.value='';
-          }
-          else if ( input.value===''){
-            this.niks = true;
-            setTimeout(() => {
-              this.niks = false;
-            }, 2000);
-          }
-          
+          }else if (this.pay === false && parseFloat(input.value) < parseFloat(this.total)) {
+          this.pay = true;
+          setTimeout(() => {
+            this.pay = false;
+          }, 2000);
+          input.value = '';
+        } else if (input.value === '') {
+          this.niks = true;
+          setTimeout(() => {
+            this.niks = false;
+          }, 2000);
+        } else if (this.count === 0 && this.total === 0) {
+          this.empty = true;
+          setTimeout(() => {
+            this.empty = false;
+          }, 2000);
         }
+      }
     }));
   });
