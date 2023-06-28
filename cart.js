@@ -1,5 +1,4 @@
 
-
  document.addEventListener("alpine:init", () => {
     Alpine.data('counter', ()=>({
       visibleS:false,

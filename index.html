@@ -21,6 +21,9 @@
   </head>
   <body class="container" x-data="counter">
     <header>Perfect Pizza</header>
+    <p style="background-color: rgb(255, 183, 0)">
+      Click on pizza icons to place an order
+    </p>
     <main>
       <div class="small">
         <h2>Small Pizza: R60,00</h2>
@@ -116,7 +119,7 @@
         </button>
         <input type="text" x-show="visible" />
         <p x-show="enjoy" style="text-align: center; color: rgb(216, 147, 9)">
-          "Enjoy your pizzas"
+          "Your order has been processed, kindly wait for your pizza."
         </p>
         <p x-show="pay" style="text-align: center; color: rgb(216, 147, 9)">
           "Sorry - that is not enough money!"
